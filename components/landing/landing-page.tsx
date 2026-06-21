@@ -1,12 +1,14 @@
+import { BeforeAfter } from "./before-after";
 import { FinalCta } from "./final-cta";
+import { FounderNote } from "./founder-note";
 import { HeroSection } from "./hero-section";
 import { IndustriesSection } from "./industries-section";
-import { ManifestoSection } from "./manifesto-section";
-import { OperationsFlow } from "./operations-flow";
+import { OrderJourney } from "./order-journey";
 import { ProcessSection } from "./process-section";
 import { ServicesBento } from "./services-bento";
 import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
+import { SupportSection } from "./support-section";
 import { WhyFlowrix } from "./why-flowrix";
 
 export function LandingPage() {
@@ -15,12 +17,14 @@ export function LandingPage() {
       <SiteHeader />
       <main>
         <HeroSection />
-        <ManifestoSection />
+        <FounderNote />
+        <BeforeAfter />
+        <OrderJourney />
         <ServicesBento />
-        <OperationsFlow />
         <IndustriesSection />
-        <WhyFlowrix />
+        <SupportSection />
         <ProcessSection />
+        <WhyFlowrix />
         <FinalCta />
       </main>
       <SiteFooter />

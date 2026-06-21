@@ -34,7 +34,7 @@ function SystemBlueprint() {
 
 export function WhyFlowrix() {
   return (
-    <section id="approach" className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
+    <section id="why" className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12">
       <div className="mx-auto grid max-w-[1400px] gap-14 lg:grid-cols-[.9fr_1.1fr] lg:items-center lg:gap-20">
         <div>
           <p className="section-label text-[#087a68]">Why Flowrix</p>

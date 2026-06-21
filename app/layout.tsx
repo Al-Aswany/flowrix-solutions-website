@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   keywords: [
-    "ERPNext implementation",
+    "ERP implementation",
     "custom software development",
     "business automation",
     "AI RAG solutions",
