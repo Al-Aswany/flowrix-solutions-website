@@ -1,4 +1,6 @@
 import type { Metadata, Viewport } from "next";
+import { JsonLd } from "@/components/seo/json-ld";
+import { organizationJsonLd } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 import "./globals.css";
 
@@ -17,9 +19,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/fowrix-log-final.png",
-        width: 1200,
-        height: 1200,
+        url: "/flowrix-logo-icon.png",
+        width: 512,
+        height: 512,
         alt: "Flowrix Solutions logo",
       },
     ],
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/fowrix-log-final.png"],
+    images: ["/flowrix-logo-icon.png"],
   },
   icons: {
     icon: [
@@ -47,18 +49,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  keywords: [
-    "ERP accounting software",
-    "ERP for growing businesses",
-    "accounting software",
-    "inventory management system",
-    "HR payroll software",
-    "CRM software",
-    "business automation",
-    "ERP demo",
-    "ERP implementation",
-    "custom software development",
-  ],
   robots: {
     index: true,
     follow: true,
@@ -80,7 +70,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        <JsonLd data={organizationJsonLd()} />
+        {children}
+      </body>
     </html>
   );
 }

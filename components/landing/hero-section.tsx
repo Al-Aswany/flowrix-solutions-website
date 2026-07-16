@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { demoHref } from "./data";
 import { HeroVisual } from "./hero-visual";
 
@@ -33,9 +34,9 @@ export function HeroSection() {
             <a href={demoHref} className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#26dfbd] px-6 py-3.5 text-sm font-semibold text-[#04110e] shadow-[0_0_35px_rgba(38,223,189,.16)] transition hover:bg-[#67f1d7] focus:outline-none focus:ring-2 focus:ring-[#a8ffef]">
               Request a Demo <ArrowIcon />
             </a>
-            <a href="#modules" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/[0.035] px-6 py-3.5 text-sm font-medium text-white/78 transition hover:border-white/25 hover:bg-white/[0.07] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#77efd9]">
+            <Link href="/#modules" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/[0.035] px-6 py-3.5 text-sm font-medium text-white/78 transition hover:border-white/25 hover:bg-white/[0.07] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#77efd9]">
               Explore ERP Modules
-            </a>
+            </Link>
           </div>
           <div className="mt-14 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/[0.08] pt-5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/30 sm:text-[9px]">
             <span>Accounting</span><span>Inventory</span><span>Sales</span><span>HR</span><span>CRM</span><span>Reports</span>

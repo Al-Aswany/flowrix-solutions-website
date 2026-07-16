@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { services } from "./data";
 
 function CardGraphic({ index }: { index: number }) {
@@ -35,7 +36,15 @@ export function ServicesBento() {
             <p className="section-label text-[#087a68]">Beyond ERP</p>
             <h2 className="mt-5 max-w-2xl text-4xl font-medium leading-[1.04] tracking-[-0.045em] text-[#081511] sm:text-5xl lg:text-[64px]">ERP is the foundation. We build everything around it.</h2>
           </div>
-          <p className="max-w-xl text-base leading-8 text-[#53625e] lg:ml-auto lg:text-lg">Beyond the ERP core — custom software, AI, automation, cloud infrastructure, POS, and web applications that complete your operating layer.</p>
+          <div className="max-w-xl lg:ml-auto">
+            <p className="text-base leading-8 text-[#53625e] lg:text-lg">Beyond the ERP core — custom software, AI, automation, cloud infrastructure, POS, and web applications that complete your operating layer.</p>
+            <Link
+              href="/services"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#0b765f] transition hover:text-[#075746]"
+            >
+              Explore all services →
+            </Link>
+          </div>
         </div>
 
         <div className="mt-14 grid auto-rows-[minmax(220px,auto)] gap-3 md:grid-cols-2 lg:grid-cols-4">
@@ -49,7 +58,7 @@ export function ServicesBento() {
                 ? "border-[#00a88b]/10 bg-[#24dcbc] text-[#05251f]"
                 : "border-black/[0.07] bg-white text-[#0a1714]";
             return (
-              <article key={service.title} className={`service-card group relative overflow-hidden rounded-[22px] border p-6 transition-transform duration-500 hover:-translate-y-1 sm:p-7 ${feature ? "lg:col-span-2" : ""} ${index === 6 ? "lg:col-span-2" : ""} ${classes}`}>
+              <article key={service.slug} className={`service-card group relative overflow-hidden rounded-[22px] border p-6 transition-transform duration-500 hover:-translate-y-1 sm:p-7 ${feature ? "lg:col-span-2" : ""} ${index === 6 ? "lg:col-span-2" : ""} ${classes}`}>
                 <div className="flex items-center justify-between">
                   <p className={`font-mono text-[9px] tracking-[0.17em] ${isDark ? "text-[#4ce6c9]" : isTeal ? "text-[#063e34]/65" : "text-[#087a68]"}`}>{service.detail}</p>
                   <p className={`font-mono text-[10px] ${isDark ? "text-white/25" : "text-black/25"}`}>{service.code}</p>
@@ -57,6 +66,18 @@ export function ServicesBento() {
                 <div className={feature || index === 6 ? "max-w-[70%]" : ""}>
                   <h3 className={`mt-12 text-2xl font-medium leading-tight tracking-[-0.03em] ${feature ? "sm:text-3xl" : ""}`}>{service.title}</h3>
                   <p className={`mt-4 max-w-lg text-sm leading-6 ${isDark ? "text-white/52" : isTeal ? "text-[#073e34]/72" : "text-[#5e6b67]"}`}>{service.description}</p>
+                  <Link
+                    href={`/services/${service.slug}`}
+                    className={`mt-5 inline-flex text-sm font-semibold transition ${
+                      isDark
+                        ? "text-[#5de9ce] hover:text-[#a8ffef]"
+                        : isTeal
+                          ? "text-[#063e34] hover:text-[#041f1a]"
+                          : "text-[#0b765f] hover:text-[#075746]"
+                    }`}
+                  >
+                    Learn about {service.title}
+                  </Link>
                 </div>
                 <CardGraphic index={index} />
                 {isTeal ? <div className="absolute -bottom-12 -right-8 h-36 w-36 rounded-full border-[24px] border-[#e0fff8]/20" /> : null}

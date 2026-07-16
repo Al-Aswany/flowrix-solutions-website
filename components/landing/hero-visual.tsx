@@ -65,7 +65,7 @@ export function HeroVisual() {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="text-[10px] font-medium uppercase tracking-[0.18em] text-[#42dfc1]">ERP Dashboard</p>
-                  <h2 className="mt-1.5 text-base font-medium text-white sm:text-lg">Finance &amp; Operations</h2>
+                  <p className="mt-1.5 text-base font-medium text-white sm:text-lg">Finance &amp; Operations</p>
                 </div>
                 <div className="hidden items-center gap-2 rounded-full border border-white/[0.07] px-3 py-1.5 text-[9px] text-white/46 sm:flex">
                   ALL MODULES <span className="text-[#3fe5c5]">ACTIVE</span>

@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "./brand-logo";
 import { demoHref, navLinks } from "./data";
@@ -12,12 +14,22 @@ function ArrowIcon() {
   );
 }
 
-const sectionIds = navLinks.map((link) => link.href.replace("#", ""));
+function isHashLink(href: string) {
+  return href.includes("#");
+}
+
+function hashId(href: string) {
+  const hash = href.split("#")[1];
+  return hash ?? "";
+}
 
 export function SiteHeader() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string>("");
+
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 24);
@@ -27,6 +39,13 @@ export function SiteHeader() {
   }, []);
 
   useEffect(() => {
+    if (!isHome) return;
+
+    const sectionIds = navLinks
+      .filter((link) => isHashLink(link.href))
+      .map((link) => hashId(link.href))
+      .filter(Boolean);
+
     const sections = sectionIds
       .map((id) => document.getElementById(id))
       .filter((el): el is HTMLElement => Boolean(el));
@@ -44,7 +63,7 @@ export function SiteHeader() {
 
     sections.forEach((section) => observer.observe(section));
     return () => observer.disconnect();
-  }, []);
+  }, [isHome]);
 
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -52,6 +71,13 @@ export function SiteHeader() {
       document.body.style.overflow = "";
     };
   }, [isOpen]);
+
+  function isActive(href: string) {
+    if (isHashLink(href)) {
+      return isHome && activeId === hashId(href);
+    }
+    return pathname === href || pathname.startsWith(`${href}/`);
+  }
 
   return (
     <header
@@ -67,26 +93,26 @@ export function SiteHeader() {
         }`}
         aria-label="Primary navigation"
       >
-        <a href="#top" aria-label="Flowrix Solutions home" className="rounded-md transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#19e3c0]">
+        <Link href="/" aria-label="Flowrix Solutions home" className="rounded-md transition-opacity hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#19e3c0]">
           <BrandLogo />
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 rounded-full border border-white/[0.07] bg-white/[0.03] p-1 backdrop-blur-sm lg:flex">
           {navLinks.map((link) => {
-            const isActive = activeId === link.href.replace("#", "");
+            const active = isActive(link.href);
             return (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
-                aria-current={isActive ? "true" : undefined}
-                style={{ color: isActive ? "#07110f" : "#ffffff" }}
+                aria-current={active ? "true" : undefined}
+                style={{ color: active ? "#07110f" : "#ffffff" }}
                 className="relative rounded-full px-4 py-2 text-[13px] font-medium transition-colors duration-200"
               >
-                {isActive ? (
+                {active ? (
                   <span className="absolute inset-0 -z-0 rounded-full bg-[#22dfbd] shadow-[0_0_20px_rgba(34,223,189,.35)]" />
                 ) : null}
                 <span className="relative z-10">{link.label}</span>
-              </a>
+              </Link>
             );
           })}
         </div>
@@ -123,18 +149,18 @@ export function SiteHeader() {
       >
         <div className="mx-auto flex max-w-[1400px] flex-col px-5 pb-6 pt-2">
           {navLinks.map((link) => {
-            const isActive = activeId === link.href.replace("#", "");
+            const active = isActive(link.href);
             return (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                style={{ color: isActive ? "#5de9ce" : "#ffffff" }}
+                style={{ color: active ? "#5de9ce" : "#ffffff" }}
                 className="flex items-center justify-between border-b border-white/8 py-4 text-sm transition-colors"
               >
                 {link.label}
                 <ArrowIcon />
-              </a>
+              </Link>
             );
           })}
           <a

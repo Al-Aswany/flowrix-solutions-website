@@ -1,20 +1,21 @@
+import { consultationHref, demoHref, siteConfig } from "@/lib/site";
+import { industries as industryPages } from "@/lib/content/industries";
+import { services as servicePages } from "@/lib/content/services";
+
+export { consultationHref, demoHref };
+
 export const navLinks = [
-  { label: "ERP Modules", href: "#modules" },
-  { label: "Industries", href: "#industries" },
-  { label: "Approach", href: "#approach" },
-  { label: "Contact", href: "#contact" },
+  { label: "ERP Modules", href: "/#modules" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "Approach", href: "/#approach" },
+  { label: "Contact", href: "/#contact" },
 ];
 
-export const demoHref =
-  "mailto:hello@flowrix-solutions.com?subject=Request%20an%20ERP%20Demo";
-
-export const consultationHref =
-  "mailto:hello@flowrix-solutions.com?subject=Book%20a%20Flowrix%20Solutions%20consultation";
-
 export const contactInfo = {
-  email: "hello@flowrix-solutions.com",
-  phone: "+20 106 001 6006",
-  whatsapp: "+20 106 001 6006",
+  email: siteConfig.email,
+  phone: siteConfig.phone,
+  whatsapp: siteConfig.whatsapp,
 } as const;
 
 export const founderNote = {
@@ -167,115 +168,8 @@ export const erpModules = [
   },
 ] as const;
 
-export const services = [
-  {
-    code: "01",
-    title: "ERP & Operations Solutions",
-    description:
-      "ERP architecture, implementation, customization, and reporting shaped around the way your teams actually operate.",
-    detail: "ERP / OPERATIONS",
-    tone: "dark",
-  },
-  {
-    code: "02",
-    title: "Custom Software",
-    description:
-      "Internal platforms, customer portals, dashboards, and tools for workflows that off-the-shelf software cannot cover.",
-    detail: "PRODUCT ENGINEERING",
-    tone: "light",
-  },
-  {
-    code: "03",
-    title: "Business Automation",
-    description:
-      "Approvals, alerts, handoffs, and document flows designed to take repetitive work out of daily operations.",
-    detail: "WORKFLOW DESIGN",
-    tone: "teal",
-  },
-  {
-    code: "04",
-    title: "AI & RAG Solutions",
-    description:
-      "Practical assistants and knowledge systems grounded in company data, with traceable sources and deliberate guardrails.",
-    detail: "APPLIED INTELLIGENCE",
-    tone: "dark",
-  },
-  {
-    code: "05",
-    title: "System Integrations",
-    description:
-      "Reliable connections between ERP, POS, finance, logistics, CRM, websites, and custom APIs.",
-    detail: "CONNECTED SYSTEMS",
-    tone: "light",
-  },
-  {
-    code: "06",
-    title: "Cloud & DevOps",
-    description:
-      "Deployments, environments, monitoring, backups, and infrastructure built for dependable growth.",
-    detail: "INFRASTRUCTURE",
-    tone: "light",
-  },
-  {
-    code: "07",
-    title: "POS & Retail Systems",
-    description:
-      "Multi-branch retail, inventory visibility, pricing logic, cashier journeys, and back-office control.",
-    detail: "RETAIL OPERATIONS",
-    tone: "dark",
-  },
-  {
-    code: "08",
-    title: "Websites & Web Apps",
-    description:
-      "Fast, clear digital experiences—from high-performing company websites to full operational web applications.",
-    detail: "DIGITAL EXPERIENCE",
-    tone: "teal",
-  },
-] as const;
-
-export const industries = [
-  {
-    title: "Retail & POS",
-    image: "Retail & POS.png",
-    quote: "By the time the numbers add up at night, the day is already gone.",
-    relief:
-      "Every branch, price and cashier journey runs on one system, so stock and sales agree in real time—not at midnight.",
-    index: "01",
-  },
-  {
-    title: "Manufacturing",
-    image: "Manufacturing.png",
-    quote: "We only find out a job lost money after we've already shipped it.",
-    relief:
-      "Materials, production, quality and maintenance are tracked against the plan as work happens, not after it closes.",
-    index: "02",
-  },
-  {
-    title: "Distribution",
-    image: "Distribution.png",
-    quote: "Stock says one thing, the shelf says another, and the customer is waiting.",
-    relief:
-      "Movement, warehouse logic and fulfillment stay in sync across every location, so what the system promises is actually there.",
-    index: "03",
-  },
-  {
-    title: "Service Companies",
-    image: "Service Companies.png",
-    quote: "Half the team is busy, half is idle, and nobody can tell me which is which.",
-    relief:
-      "Tickets, schedules, contracts and billing share one view, so you can see capacity and margin before they slip.",
-    index: "04",
-  },
-  {
-    title: "Internal Operations",
-    image: "Internal Operations.png",
-    quote: "Every approval lives in someone's inbox, and that someone is on leave.",
-    relief:
-      "Scattered approvals, documents and recurring admin become traceable workflows that keep moving without you chasing them.",
-    index: "05",
-  },
-] as const;
+export const services = servicePages;
+export const industries = industryPages;
 
 export const supportPrinciples = [
   {

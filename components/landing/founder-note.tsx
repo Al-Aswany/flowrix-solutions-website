@@ -9,7 +9,7 @@ export function FounderNote() {
       <div className="relative mx-auto max-w-[1100px]">
         <div className="flex items-center gap-3">
           <span className="h-px w-8 bg-[#42e4c5]" />
-          <p className="section-label text-[#58e6ca]">{founderNote.badge}</p>
+          <h2 className="section-label text-[#58e6ca]">{founderNote.badge}</h2>
         </div>
 
         <div className="mt-10 space-y-8">
