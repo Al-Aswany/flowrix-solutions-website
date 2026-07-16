@@ -1,4 +1,5 @@
 import { BeforeAfter } from "./before-after";
+import { ErpModules } from "./erp-modules";
 import { FinalCta } from "./final-cta";
 import { FounderNote } from "./founder-note";
 import { HeroSection } from "./hero-section";
@@ -17,6 +18,7 @@ export function LandingPage() {
       <SiteHeader />
       <main>
         <HeroSection />
+        <ErpModules />
         <FounderNote />
         <BeforeAfter />
         <OrderJourney />

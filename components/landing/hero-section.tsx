@@ -1,4 +1,4 @@
-import { consultationHref } from "./data";
+import { demoHref } from "./data";
 import { HeroVisual } from "./hero-visual";
 
 function ArrowIcon() {
@@ -21,24 +21,24 @@ export function HeroSection() {
         <div className="relative z-10 max-w-[700px]">
           <div className="flex items-center gap-3">
             <span className="h-px w-8 bg-[#42e4c5]" />
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#58e6ca] sm:text-[10px]">Digital operations, engineered</p>
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#58e6ca] sm:text-[10px]">ERP & Accounting Platform</p>
           </div>
-          <h1 className="mt-8 text-[50px] font-medium leading-[.98] tracking-[-0.055em] text-white sm:text-[70px] lg:text-[clamp(64px,5.4vw,86px)]">
-            We build the systems that keep business <span className="text-gradient">moving.</span>
+          <h1 className="mt-8 text-[44px] font-medium leading-[.98] tracking-[-0.055em] text-white sm:text-[64px] lg:text-[clamp(56px,4.8vw,80px)]">
+            Modern ERP &amp; Accounting Software for <span className="text-gradient">Growing Businesses</span>
           </h1>
           <p className="mt-7 max-w-[620px] text-base leading-8 text-white/55 sm:text-lg sm:leading-8">
-            From ERP and automation to AI, cloud, and custom software—Flowrix turns scattered tools into one connected operating system for your company.
+            Connect finance, inventory, sales, HR, CRM and reporting in one intelligent operating system.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <a href={consultationHref} className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#26dfbd] px-6 py-3.5 text-sm font-semibold text-[#04110e] shadow-[0_0_35px_rgba(38,223,189,.16)] transition hover:bg-[#67f1d7] focus:outline-none focus:ring-2 focus:ring-[#a8ffef]">
-              Book a consultation <ArrowIcon />
+            <a href={demoHref} className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#26dfbd] px-6 py-3.5 text-sm font-semibold text-[#04110e] shadow-[0_0_35px_rgba(38,223,189,.16)] transition hover:bg-[#67f1d7] focus:outline-none focus:ring-2 focus:ring-[#a8ffef]">
+              Request a Demo <ArrowIcon />
             </a>
-            <a href="#services" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/[0.035] px-6 py-3.5 text-sm font-medium text-white/78 transition hover:border-white/25 hover:bg-white/[0.07] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#77efd9]">
-              Explore services
+            <a href="#modules" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/14 bg-white/[0.035] px-6 py-3.5 text-sm font-medium text-white/78 transition hover:border-white/25 hover:bg-white/[0.07] hover:text-white focus:outline-none focus:ring-2 focus:ring-[#77efd9]">
+              Explore ERP Modules
             </a>
           </div>
           <div className="mt-14 flex flex-wrap gap-x-7 gap-y-3 border-t border-white/[0.08] pt-5 font-mono text-[8px] uppercase tracking-[0.14em] text-white/30 sm:text-[9px]">
-            <span>Strategy</span><span>Architecture</span><span>Engineering</span><span>Automation</span>
+            <span>Accounting</span><span>Inventory</span><span>Sales</span><span>HR</span><span>CRM</span><span>Reports</span>
           </div>
         </div>
         <HeroVisual />

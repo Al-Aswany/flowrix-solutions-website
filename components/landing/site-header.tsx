@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BrandLogo } from "./brand-logo";
-import { consultationHref, navLinks } from "./data";
+import { demoHref, navLinks } from "./data";
 
 function ArrowIcon() {
   return (
@@ -93,10 +93,10 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <a
-            href={consultationHref}
+            href={demoHref}
             className="group inline-flex items-center gap-2 rounded-full border border-[#44f5d4]/30 bg-[#22dfbd] px-5 py-2.5 text-[13px] font-semibold text-[#04110e] shadow-[0_0_30px_rgba(34,223,189,.14)] transition hover:bg-[#64f7dc] hover:shadow-[0_0_36px_rgba(34,223,189,.3)] focus:outline-none focus:ring-2 focus:ring-[#a7ffef]"
           >
-            Book a consultation
+            Request a Demo
             <ArrowIcon />
           </a>
         </div>
@@ -138,11 +138,11 @@ export function SiteHeader() {
             );
           })}
           <a
-            href={consultationHref}
+            href={demoHref}
             onClick={() => setIsOpen(false)}
             className="mt-5 flex items-center justify-center gap-2 rounded-full bg-[#22dfbd] px-5 py-3 text-sm font-semibold text-[#04110e]"
           >
-            Book a consultation <ArrowIcon />
+            Request a Demo <ArrowIcon />
           </a>
         </div>
       </div>

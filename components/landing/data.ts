@@ -1,12 +1,21 @@
 export const navLinks = [
-  { label: "Operations", href: "#operations" },
+  { label: "ERP Modules", href: "#modules" },
   { label: "Industries", href: "#industries" },
-  { label: "Support", href: "#support" },
   { label: "Approach", href: "#approach" },
+  { label: "Contact", href: "#contact" },
 ];
+
+export const demoHref =
+  "mailto:hello@flowrix-solutions.com?subject=Request%20an%20ERP%20Demo";
 
 export const consultationHref =
   "mailto:hello@flowrix-solutions.com?subject=Book%20a%20Flowrix%20Solutions%20consultation";
+
+export const contactInfo = {
+  email: "hello@flowrix-solutions.com",
+  phone: "+20 106 001 6006",
+  whatsapp: "+20 106 001 6006",
+} as const;
 
 export const founderNote = {
   badge: "Why we build this",
@@ -82,6 +91,81 @@ export const orderJourney = {
   ],
   footnote: "The same quiet handoff runs every order, payday and project—on one platform.",
 };
+
+export const erpModules = [
+  {
+    code: "01",
+    title: "Accounting & Finance",
+    description:
+      "Full double-entry accounting with real-time P&L, balance sheet, and cash flow — always reconciled.",
+    features: [
+      "General ledger & chart of accounts",
+      "AP / AR & invoice management",
+      "Bank reconciliation & journal entries",
+    ],
+    detail: "FINANCE",
+  },
+  {
+    code: "02",
+    title: "Inventory & Stock",
+    description:
+      "Track every item across warehouses with automated reorder alerts and precise stock valuation.",
+    features: [
+      "Multi-warehouse stock management",
+      "Reorder rules & low-stock alerts",
+      "Stock movements, adjustments & valuation",
+    ],
+    detail: "INVENTORY",
+  },
+  {
+    code: "03",
+    title: "Sales & Purchasing",
+    description:
+      "From quotation to invoice to delivery — the entire order cycle on one screen, no re-keying.",
+    features: [
+      "Quotations, sales orders & invoicing",
+      "Purchase orders & supplier management",
+      "Delivery tracking & fulfillment",
+    ],
+    detail: "SALES / PURCHASING",
+  },
+  {
+    code: "04",
+    title: "HR & Payroll",
+    description:
+      "Manage your team from hire to payslip with complete attendance and leave tracking.",
+    features: [
+      "Employee records & org structure",
+      "Attendance, leave & scheduling",
+      "Payroll runs, deductions & payslips",
+    ],
+    detail: "HR / PAYROLL",
+  },
+  {
+    code: "05",
+    title: "CRM",
+    description:
+      "Follow every lead from first contact through close, with full customer history in one place.",
+    features: [
+      "Lead & opportunity pipeline",
+      "Customer history & communication log",
+      "Follow-up tasks & activity tracking",
+    ],
+    detail: "CRM",
+  },
+  {
+    code: "06",
+    title: "Dashboards & Reports",
+    description:
+      "Real-time KPIs and custom reports across every module — decisions made on live data, not exports.",
+    features: [
+      "P&L, balance sheet & cash flow reports",
+      "Inventory, sales & HR dashboards",
+      "Custom report builder & data exports",
+    ],
+    detail: "REPORTS",
+  },
+] as const;
 
 export const services = [
   {

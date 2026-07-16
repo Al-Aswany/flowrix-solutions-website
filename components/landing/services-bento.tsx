@@ -32,10 +32,10 @@ export function ServicesBento() {
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-8 lg:grid-cols-[.85fr_1.15fr] lg:items-end">
           <div>
-            <p className="section-label text-[#087a68]">What we build</p>
-            <h2 className="mt-5 max-w-2xl text-4xl font-medium leading-[1.04] tracking-[-0.045em] text-[#081511] sm:text-5xl lg:text-[64px]">The systems behind a better-run business.</h2>
+            <p className="section-label text-[#087a68]">Beyond ERP</p>
+            <h2 className="mt-5 max-w-2xl text-4xl font-medium leading-[1.04] tracking-[-0.045em] text-[#081511] sm:text-5xl lg:text-[64px]">ERP is the foundation. We build everything around it.</h2>
           </div>
-          <p className="max-w-xl text-base leading-8 text-[#53625e] lg:ml-auto lg:text-lg">From core ERP and retail operations to custom platforms, AI, and cloud infrastructure—Flowrix builds the whole operating layer, not another isolated tool.</p>
+          <p className="max-w-xl text-base leading-8 text-[#53625e] lg:ml-auto lg:text-lg">Beyond the ERP core — custom software, AI, automation, cloud infrastructure, POS, and web applications that complete your operating layer.</p>
         </div>
 
         <div className="mt-14 grid auto-rows-[minmax(220px,auto)] gap-3 md:grid-cols-2 lg:grid-cols-4">
