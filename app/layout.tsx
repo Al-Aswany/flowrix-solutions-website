@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/flowrix-logo-icon.png",
+        url: "/flowrix-logo-icon1.png",
         width: 512,
         height: 512,
         alt: "Flowrix Solutions logo",
@@ -30,18 +30,18 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: ["/flowrix-logo-icon.png"],
+    images: ["/flowrix-logo-icon1.png"],
   },
   icons: {
     icon: [
       {
-        url: "/flowrix-logo-icon.png",
+        url: "/flowrix-logo-icon1.png",
         type: "image/png",
       },
     ],
     apple: [
       {
-        url: "/flowrix-logo-icon.png",
+        url: "/flowrix-logo-icon1.png",
         type: "image/png",
       },
     ],

@@ -8,14 +8,14 @@ type BrandLogoProps = {
 export function BrandLogo({ light = true, compact = false }: BrandLogoProps) {
   return (
     <span className="flex items-center gap-3">
-      <span className="brand-mark relative block h-9 w-9 shrink-0 overflow-hidden">
+      <span className="brand-mark relative block h-9 w-9 shrink-0">
         <Image
-          src="/flowrix-logo-icon.png"
+          src="/flowrix-logo-icon1.png"
           alt=""
           fill
           sizes="36px"
           priority
-          className="scale-[3.35] object-contain"
+          className="object-contain"
         />
       </span>
       {!compact ? (

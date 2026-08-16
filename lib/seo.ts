@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
 
 const defaultOgImage = {
-  url: "/flowrix-logo-icon.png",
+  url: "/flowrix-logo-icon1.png",
   width: 512,
   height: 512,
   alt: "Flowrix Solutions logo",
@@ -72,7 +72,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/flowrix-logo-icon.png`,
+    logo: `${siteConfig.url}/flowrix-logo-icon1.png`,
     email: siteConfig.email,
     telephone: "+20 106 001 6006",
   };
